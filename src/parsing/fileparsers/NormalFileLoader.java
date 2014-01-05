@@ -16,7 +16,7 @@ public class NormalFileLoader {
         public  void spliteFile() {
                 try {
                         InputStream flux = new FileInputStream(
-                                        "C:/Users/Jordan/Documents/texte.txt");
+                                        "/Users/Documents/texte.txt");
                         InputStreamReader lecture = new InputStreamReader(flux);
                         BufferedReader buff = new BufferedReader(lecture);
                         String ligne;
@@ -132,7 +132,7 @@ public class NormalFileLoader {
                         Boolean newFile = false;
                         // c'est le dossier destination pour mettre les fichiers splitter
                         String TargetFolder = "C:/Users/hamida/work/RI/projet";
-                        // Vidage du répertoire pour la réutilisation
+                        // Vidage du r��pertoire pour la r��utilisation
                         
                         File TargetDir = new File(TargetFolder);
                         //purgeDirectory(TargetDir);
@@ -146,7 +146,7 @@ public class NormalFileLoader {
                                         contenu = "";
                                         newFile = false;
                                 }
-                                // récupperation du docno qui sera nom de fichier
+                                // r��cupperation du docno qui sera nom de fichier
                                 if (ligne.toLowerCase().contains("<docno>")) {
                                         fileNo = ligne.replaceAll("<doc><docno>", "");
                                         fileNo = fileNo.replaceAll("</docno>", "");
